@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="爱答题"
+      android:padding="10dp"
+      android:textAlignment="textStart"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:textSize="25sp"
+      android:background="#CA7272"
+      />
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:background="@color/white"/>
+
+  <LinearLayout
+      android:id="@+id/ll_train"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@drawable/home_btn_bg1"
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon1"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+          android:text="模块训练"
+         android:textColor="@color/black"
+         android:textAlignment="center"
+         android:layout_gravity="center"
+         android:gravity="center"
+         android:layout_weight="1"
+        android:textSize="22sp"
+      />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon2"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@drawable/home_btn_bg1"
+      android:layout_marginTop="30dp"
+
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon3"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="真题再考"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="22sp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon2"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@drawable/home_btn_bg1"
+      android:layout_marginTop="30dp"
+
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon4"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="搜索真题"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="22sp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon2"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@drawable/home_btn_bg1"
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      android:layout_marginTop="30dp"
+      android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon5"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="排行榜 "
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="22sp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_icon2"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+
+
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@color/white"
+      android:layout_weight="1"/>
+</LinearLayout>
