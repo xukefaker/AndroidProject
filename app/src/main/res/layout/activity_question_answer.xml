@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="答题进行中"
+        android:padding="15dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:background="#CA7272"
+        />
+     <FrameLayout
+         android:id="@+id/ll_question"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_last"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/question_type_btn_bg1"
+            android:text="上一题"
+            android:textColor="#B6EFEC"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+      <TextView
+          android:id="@+id/tv_next"
+          android:layout_width="0dp"
+          android:layout_height="60dp"
+          android:layout_weight="1"
+          android:background="@drawable/question_type_btn_bg2"
+          android:text="下一题"
+          android:textColor="@color/white"
+          android:textSize="20sp"
+          android:gravity="center"
+          android:textStyle="bold"/>
+
+
+    </LinearLayout>
+</LinearLayout>

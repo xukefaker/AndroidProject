@@ -26,7 +26,7 @@ public class ENetworkPath {
      public  static  final  String QUESTION_TYPE_ALL=BASE_PATH+"/question/selectAllQuestionType";
 
      //获取指定问题类型，个数  访问地址
-    public static  final  String LIST_QUESTION_BY_QUERY=BASE_PATH+"/question/selectAllQuestionType";
+    public static  final  String LIST_QUESTION_BY_QUERY=BASE_PATH+"/question/getListQuestionByType";
 
 
 

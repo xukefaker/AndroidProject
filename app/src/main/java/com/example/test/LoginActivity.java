@@ -114,9 +114,7 @@ public class LoginActivity extends Activity {
                 finish();
             }
         });
-
     }
-
 
     private void initVIew() {
         mBtn_login = findViewById(R.id.btn_login);
@@ -124,7 +122,6 @@ public class LoginActivity extends Activity {
         mEt_name = findViewById(R.id.et_name);
         mEt_password = findViewById(R.id.et_password);
         sharedPreferences = this.getSharedPreferences("Session", MODE_PRIVATE);
-
 
     }
 

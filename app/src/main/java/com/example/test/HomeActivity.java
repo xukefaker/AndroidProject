@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ import com.powater.common.util.CommonResult;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends Activity {
@@ -54,8 +56,10 @@ public class HomeActivity extends Activity {
                  String s = String.valueOf(commonResult.getObject());
                  List<QuestionTypeDTO> questionTypeDTOS = JSON.parseArray(s, QuestionTypeDTO.class);
 
+                Intent intent=new Intent(HomeActivity.this,QuestionTypeActivity.class);
+                intent.putParcelableArrayListExtra("question_type", (ArrayList<? extends Parcelable>) questionTypeDTOS);
+                 startActivity(intent);
 
-                 Toast.makeText(HomeActivity.this,questionTypeDTOS.get(0).getTypeDes(), Toast.LENGTH_SHORT).show();
 
              } catch (Exception e) {
                  e.printStackTrace();

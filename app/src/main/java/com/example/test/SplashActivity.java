@@ -23,6 +23,7 @@ public class SplashActivity extends Activity {
     SharedPreferences sharedPreferences;
     boolean isJump = false;
     CommonResult commonResult;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class SplashActivity extends Activity {
                 String json = jsonObject.toString();
 
                 String msg = PostRequestUtil.commonPost(ENetworkPath.USER_GET, json, sharedPreferences);
-                 commonResult = MsgToCommonResultUtil.strToCommonResult(msg);
+                commonResult = MsgToCommonResultUtil.strToCommonResult(msg);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -64,19 +65,20 @@ public class SplashActivity extends Activity {
 
                     } catch (
                             Exception e) {
+                        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
                         e.printStackTrace();
                     }
                 }
             }.
 
                     start();
-        }else {
+        } else {
             Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
         }
-
-
 
 
     }

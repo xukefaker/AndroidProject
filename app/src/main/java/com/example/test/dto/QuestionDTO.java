@@ -1,6 +1,9 @@
 package com.example.test.dto;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +14,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class QuestionDTO  {
+public class QuestionDTO implements Parcelable {
 
 
     /**
@@ -55,5 +58,43 @@ public class QuestionDTO  {
     private String type;
 
 
+    protected QuestionDTO(Parcel in) {
+        questionDes = in.readString();
+        aDes = in.readString();
+        bDes = in.readString();
+        cDes = in.readString();
+        dDes = in.readString();
+        answerHead = in.readString();
+        answerDetial = in.readString();
+        type = in.readString();
+    }
 
+    public static final Creator<QuestionDTO> CREATOR = new Creator<QuestionDTO>() {
+        @Override
+        public QuestionDTO createFromParcel(Parcel in) {
+            return new QuestionDTO(in);
+        }
+
+        @Override
+        public QuestionDTO[] newArray(int size) {
+            return new QuestionDTO[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(questionDes);
+        dest.writeString(aDes);
+        dest.writeString(bDes);
+        dest.writeString(cDes);
+        dest.writeString(dDes);
+        dest.writeString(answerHead);
+        dest.writeString(answerDetial);
+        dest.writeString(type);
+    }
 }
