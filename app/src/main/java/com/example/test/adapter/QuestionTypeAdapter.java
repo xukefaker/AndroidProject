@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.test.R;
@@ -16,7 +17,7 @@ public class QuestionTypeAdapter extends BaseAdapter {
 
     private List<QuestionTypeDTO> mData ;
     private Context mContext;
-
+    private int [] images={R.drawable.list_type_icon1,R.drawable.list_type_icon2,R.drawable.list_type_icon3,R.drawable.list_type_icon4};
     public QuestionTypeAdapter(List<QuestionTypeDTO> mData, Context mContext) {
         this.mData = mData;
         this.mContext = mContext;
@@ -44,6 +45,9 @@ public class QuestionTypeAdapter extends BaseAdapter {
         TextView txType = convertView.findViewById(R.id.tx_type);
 
         txType.setText(mData.get(position).getTypeDes());
+
+        ImageView imageView=convertView.findViewById(R.id.iv_type);
+        imageView.setImageResource(images[position]);
 
         return convertView;
     }

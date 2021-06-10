@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
@@ -25,7 +25,7 @@
         android:gravity="center_vertical"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/tv_b_des"
@@ -38,7 +38,7 @@
         android:gravity="center_vertical"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/tv_c_des"
@@ -51,7 +51,7 @@
         android:gravity="center_vertical"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/tv_d_des"
@@ -64,5 +64,5 @@
         android:gravity="center_vertical"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="13sp" />
 </LinearLayout>

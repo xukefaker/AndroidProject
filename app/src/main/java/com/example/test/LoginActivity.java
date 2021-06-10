@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.test.constrant.ENetworkPath;
 import com.example.test.utils.MsgToCommonResultUtil;
 import com.example.test.utils.PostRequestUtil;
@@ -24,7 +26,7 @@ import java.io.IOException;
 
 import okhttp3.MediaType;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 

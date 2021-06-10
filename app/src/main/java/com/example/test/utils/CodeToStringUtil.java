@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Message;
 import android.widget.Toast;
 
-import com.example.test.ResponseCode;
+import com.example.test.constrant.ResponseCode;
 
 import org.bouncycastle.jcajce.provider.digest.Keccak;
 import org.bouncycastle.util.encoders.Hex;

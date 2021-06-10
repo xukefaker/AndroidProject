@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.test.constrant.ENetworkPath;
 import com.example.test.utils.MsgToCommonResultUtil;
@@ -19,7 +20,7 @@ import com.powater.common.util.CommonResult;
 
 import org.json.JSONObject;
 
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends AppCompatActivity {
     private Button mBtn_login, mBtn_register;
     private EditText mEt_name;
     private EditText mEt_password;

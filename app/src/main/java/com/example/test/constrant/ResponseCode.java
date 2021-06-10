@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.constrant;
 
 public class ResponseCode {
     public static final int SIGN_IN_SUCCESS = 2000;

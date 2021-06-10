@@ -15,11 +15,64 @@
         android:textSize="25sp"
         android:background="#CA7272"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+      <ImageView
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:src="@drawable/question_icon1"
+          android:layout_marginTop="5dp"
+          android:layout_marginLeft="10dp"
+          android:padding="5dp"
+          />
+        <TextView
+            android:id="@+id/tv_curPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#7BE6D2"
+            android:text="1/25"
+            android:textSize="25sp"
+            android:layout_marginLeft="5dp"/>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:src="@drawable/question_icon2"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            />
+        <TextView
+            android:id="@+id/tv_down_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="45:00"
+            android:textColor="#7BE6D2"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F1F5F8"/>
      <FrameLayout
          android:id="@+id/ll_question"
          android:layout_width="match_parent"
          android:layout_height="0dp"
          android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#F1F5F8"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -29,12 +82,13 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@drawable/question_type_btn_bg1"
+            android:background="@drawable/question_type_btn_bg3"
             android:text="上一题"
-            android:textColor="#B6EFEC"
+            android:textColor="#7BE6D2"
             android:textSize="20sp"
             android:gravity="center"
             android:textStyle="bold"/>
+
       <TextView
           android:id="@+id/tv_next"
           android:layout_width="0dp"

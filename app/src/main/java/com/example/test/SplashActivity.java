@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.test.constrant.ENetworkPath;
 import com.example.test.utils.MsgToCommonResultUtil;
@@ -19,7 +20,7 @@ import com.powater.common.util.CommonResult;
 
 import org.json.JSONObject;
 
-public class SplashActivity extends Activity {
+public class SplashActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     boolean isJump = false;
     CommonResult commonResult;
