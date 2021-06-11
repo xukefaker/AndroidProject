@@ -1,16 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#CA7272"
+        android:orientation="horizontal"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:src="@drawable/question_result_icon1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="答题结果"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/tv_res"
+        android:id="@+id/tv_lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-         android:layout_margin="20dp"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="正确率："
+        android:textColor="@color/blue"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/question_result_icon2"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="共答对？道题"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/question_result_icon3"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_error"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="共答错？道题"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/question_result_icon4"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_unanswer"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="未答？道题"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="答题卡:"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:layout_margin="20dp"/>
+      <GridView
+          android:id="@+id/gv_res"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="20dp"
+          android:numColumns="5"
+/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+          android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_analysis"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/question_result_btn_bg1"
+            android:text="查看解析"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#4AA8F8"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
 
 </LinearLayout>
+
+
+

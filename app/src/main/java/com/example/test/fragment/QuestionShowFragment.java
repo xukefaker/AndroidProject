@@ -18,13 +18,13 @@ import com.example.test.dto.QuestionDTO;
 import java.util.List;
 
 @SuppressLint("ValidFragment")
-public class QuestionFragment extends Fragment {
+public class QuestionShowFragment extends Fragment {
 
 
 
     private QuestionDTO questionDTO;
 
-    public QuestionFragment(QuestionDTO questionDTO,int index) {
+    public QuestionShowFragment(QuestionDTO questionDTO, int index) {
         this.questionDTO = questionDTO;
         this.index=index;
     }
@@ -85,7 +85,7 @@ public class QuestionFragment extends Fragment {
         d = false;
     }
 
-    public QuestionFragment that;
+    public QuestionShowFragment that;
 
     //绑定事件的方法
     public void bandAction() {

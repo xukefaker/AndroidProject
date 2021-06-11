@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject();
                 try {
                     jsonObject.put("userName", name);
-                    jsonObject.put("userPassword", password);
+                    jsonObject.put("password", password);
                     String json = jsonObject.toString();
                     String msg = PostRequestUtil.commonPost(ENetworkPath.USER_REGISTER, json, sharedPreferences);
 

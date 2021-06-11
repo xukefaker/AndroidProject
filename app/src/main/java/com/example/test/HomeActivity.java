@@ -27,8 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
-   private LinearLayout ll_train;
+    private LinearLayout ll_train;
+    private LinearLayout ll_setting;
     SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,43 +38,51 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         initVIew();
-        String token = sharedPreferences.getString("token","");
+        String token = sharedPreferences.getString("token", "");
         ll_train.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-             try {
-                 String msg = null;
-                 JSONObject jsonObject = new JSONObject();
-                 jsonObject.put("token", token);
-                 String json = jsonObject.toString();
-                 msg = PostRequestUtil.commonPost(ENetworkPath.QUESTION_TYPE_ALL, json, sharedPreferences);
-                 CommonResult commonResult = MsgToCommonResultUtil.strToCommonResult(msg);
-                 if (commonResult.getCode()==1) {
-                     Toast.makeText(HomeActivity.this,msg, Toast.LENGTH_SHORT).show();
-                 }else {
-                     Toast.makeText(HomeActivity.this,msg, Toast.LENGTH_SHORT).show();
-                 }
+                try {
+                    String msg = null;
+                    JSONObject jsonObject = new JSONObject();
+                    jsonObject.put("token", token);
+                    String json = jsonObject.toString();
+                    msg = PostRequestUtil.commonPost(ENetworkPath.QUESTION_TYPE_ALL, json, sharedPreferences);
+                    CommonResult commonResult = MsgToCommonResultUtil.strToCommonResult(msg);
+                    if (commonResult.getCode() == 1) {
+                        Toast.makeText(HomeActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(HomeActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
 
-                 String s = String.valueOf(commonResult.getObject());
-                 List<QuestionTypeDTO> questionTypeDTOS = JSON.parseArray(s, QuestionTypeDTO.class);
+                    String s = String.valueOf(commonResult.getObject());
+                    List<QuestionTypeDTO> questionTypeDTOS = JSON.parseArray(s, QuestionTypeDTO.class);
 
-                Intent intent=new Intent(HomeActivity.this,QuestionTypeActivity.class);
-                intent.putParcelableArrayListExtra("question_type", (ArrayList<? extends Parcelable>) questionTypeDTOS);
-                 startActivity(intent);
+                    Intent intent = new Intent(HomeActivity.this, QuestionTypeActivity.class);
+                    intent.putParcelableArrayListExtra("question_type", (ArrayList<? extends Parcelable>) questionTypeDTOS);
+                    startActivity(intent);
 
 
-             } catch (Exception e) {
-                 e.printStackTrace();
-             }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-         }
-     });
+            }
+        });
+        ll_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
+                startActivity(intent);
 
+            }
+        });
     }
 
     private void initVIew() {
-         ll_train=findViewById(R.id.ll_train);
+        ll_train = findViewById(R.id.ll_train);
+        ll_setting = findViewById(R.id.ll_setting);
         sharedPreferences = this.getSharedPreferences("Session", MODE_PRIVATE);
     }
 

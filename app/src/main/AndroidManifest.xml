@@ -29,6 +29,9 @@
         <activity android:name=".QuestionTypeActivity" />
         <activity android:name=".QuestionAnswerActivity" />
         <activity android:name=".QuestionResultActivity"/>
+        <activity android:name=".QuestionAnalysisActivity"/>
+        <activity android:name=".SettingActivity"/>
+
     </application>
 
 </manifest>

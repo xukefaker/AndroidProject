@@ -160,6 +160,7 @@
 
   </LinearLayout>
   <LinearLayout
+      android:id="@+id/ll_setting"
       android:layout_width="match_parent"
       android:layout_height="60dp"
       android:background="@drawable/home_btn_bg1"

@@ -1,6 +1,5 @@
 package com.example.test;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -11,7 +10,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Parcelable;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,8 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.test.dto.QuestionDTO;
-import com.example.test.fragment.QuestionFragment;
-import com.example.test.utils.CodeToStringUtil;
+import com.example.test.fragment.QuestionShowFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +34,7 @@ public class QuestionAnswerActivity extends AppCompatActivity {
     private TextView tv_curPosition;
     private TextView tv_down_time;
     private FragmentManager fManager;
-    private QuestionFragment[] questionFragments;//题目fragment 数组
+    private QuestionShowFragment[] questionShowFragments;//题目fragment 数组
     private int index;//当前 题目 的下标
     private List<String> postValuesList;//存储每道题目的回答的答案
 
@@ -63,7 +60,7 @@ public class QuestionAnswerActivity extends AppCompatActivity {
                     index--;
                     FragmentTransaction fTransaction = fManager.beginTransaction();
                     hideAll(fTransaction);
-                    fTransaction.show(questionFragments[index]);
+                    fTransaction.show(questionShowFragments[index]);
                     fTransaction.commit();
                     tv_curPosition.setText((index + 1) + "/" + mData.size());
                     tv_next.setText("下一题");
@@ -74,11 +71,11 @@ public class QuestionAnswerActivity extends AppCompatActivity {
         tv_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (index < questionFragments.length - 1) {
+                if (index < questionShowFragments.length - 1) {
                     index++;
                     FragmentTransaction fTransaction = fManager.beginTransaction();
                     hideAll(fTransaction);
-                    fTransaction.show(questionFragments[index]);
+                    fTransaction.show(questionShowFragments[index]);
                     fTransaction.commit();
                     tv_curPosition.setText((index + 1) + "/" + mData.size());//设置显示当前题目位置数的控件的显示  1/25
 
@@ -140,26 +137,24 @@ public class QuestionAnswerActivity extends AppCompatActivity {
         for (int i = 0; i < mData.size(); i++) {//初始化答案集合
             postValuesList.add("");
         }
-        questionFragments = new QuestionFragment[mData.size()];
+        questionShowFragments = new QuestionShowFragment[mData.size()];
         fManager = getFragmentManager();
         FragmentTransaction fTransaction = fManager.beginTransaction();
         for (int i = 0; i < mData.size(); i++) {
             QuestionDTO questionDTO = mData.get(i);
-            questionFragments[i] = new QuestionFragment(questionDTO,i);
-            fTransaction.add(R.id.ll_question, questionFragments[i]);
+            questionShowFragments[i] = new QuestionShowFragment(questionDTO,i);
+            fTransaction.add(R.id.ll_question, questionShowFragments[i]);
         }
         hideAll(fTransaction);
-        Bundle bundle = new Bundle();
-
-        fTransaction.show(questionFragments[index]);
+        fTransaction.show(questionShowFragments[index]);
         fTransaction.commit();
 
     }
 
 
     public void hideAll(FragmentTransaction fragmentTransaction) {
-        for (int i = 0; i < questionFragments.length; i++) {
-            fragmentTransaction.hide(questionFragments[i]);
+        for (int i = 0; i < questionShowFragments.length; i++) {
+            fragmentTransaction.hide(questionShowFragments[i]);
         }
 
 
